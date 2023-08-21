@@ -334,3 +334,65 @@ print(names[n])
 #     i+=1
 
 #     n+=1
+
+
+
+#33
+# from random import randrange
+# number=randrange(1,101)
+# guess=0
+
+# while guess!=number:
+#     guess=int(input('enter number 1 -> 100 : '))
+#     if guess>number:
+#         print('down')
+#     elif guess<number:
+#         print('up')
+
+# print('win')
+
+#34
+#jump
+# for i in range(1,100):
+#     if i%5==0:
+#         # break
+#         continue
+#     print(i,end=' ')
+
+# print('end')
+
+#35
+# import winsound
+# n=int(input('enter number : '))
+# match n:
+#     case 1:
+#         print('saturday')
+#     case 2:
+#         print('sunday')
+#     case 3:
+#         print('monday')
+#     case 4:
+#         print('tuesday')
+#     case 5:
+#         print('wednesday')
+#     case 6:
+#         print('thursday')
+#     case 7:
+#         print('friday')
+#     case _:
+#         print('invalid input')
+#         winsound.Beep(820,1500)
+
+#36
+# names=[]
+# while True:
+#     n=input('enter name : ')
+#     n=n.strip()
+#     if len(n)>0:
+#         names.append(n)
+#     else:
+#         break
+#     print(names)
+
+# print(names)
+# print('end')

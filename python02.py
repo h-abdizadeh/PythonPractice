@@ -234,3 +234,77 @@
 # #     print(names[i])
 # for n in names:
 #     print(n)
+
+#24
+# numbers=[3,9,12,8,-3,6,11]
+# for n in numbers:
+#     if n%2==0:
+#         print(n,end=' ')
+
+#25
+# n=100
+# while n>0:
+#     print(n,end=' ')
+#     #n+=1
+#     n=int(n/2)
+
+#26
+# names=[]
+# while True:
+#     n=input('enter name : ')
+#     n=n.strip()
+#     if len(n)>0:
+#         names.append(n)
+#     else:
+#         break
+#     print(names)
+
+# print(names)
+# print('end')
+
+
+#27
+# from random import randrange
+# n=randrange(1,101)
+# a=0
+# while a!=n:
+#     a=int(input('enter number 1 to 100'))
+#     if a>n:
+#         print('down')
+#     elif a<n:
+#         print('up')
+
+# print('win')
+
+#28
+# numbers=list(range(1,101))
+# for i in numbers:
+#     #1
+#     # if i==50:
+#     #     break
+#     #2
+#     if i%5==0:
+#         continue
+#     print(i,end=' ')
+
+#29
+# n='   Hello World, python   '
+# print(len(n))
+# print(len(n.strip()))
+# print(len(n.lstrip()))
+# print(len(n.rstrip()))
+# print(n.lower())
+# print(n.upper())
+# print(n.title())
+# print(n.replace('l','*'))
+# print(n.replace('Hello','Hi'))
+# print(n.index('o'))
+# print(n.index('or'))
+# print(n.find('l'))
+# print(n.find('z'))
+# print(n.isdigit())
+# print(n.isspace())
+# print(n.strip().capitalize())
+# print(n.count('l'))
+# print(n[6:10:1])
+

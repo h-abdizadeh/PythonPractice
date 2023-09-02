@@ -13,6 +13,34 @@ def div():
     else:
         label1['text']=n/m
 
+def Calc(opr):
+    n=int(entry1.get())
+    m=int(entry2.get())
+    if opr=='+':
+        label1['text']=n+m
+    elif opr=='-':
+        label1['text']=n-m
+    elif opr=='*':
+        label1['text']=n*m
+    elif opr=='/':
+        label1['text']=n/m
+
+def CalcMatch(opr):
+    n=int(entry1.get())
+    m=int(entry2.get())
+    match opr:
+        case '+':
+            label1['text']=n+m
+        case '-':
+            label1['text']=n-m
+        case '*':
+            label1['text']=n*m
+        case '/':
+            label1['text']=n/m
+        case _:
+            label1['text']='inavlid input'
+    
+
 app=Tk()
 app.title('miniCalculator')
 app.geometry('420x240')
@@ -33,10 +61,15 @@ label1.place(x=10,y=70)
 #button
 btn1=Button(app,width='3',font='none 28',text='+',command=sum)
 btn1.place(x=20,y=150)
-btn2=Button(app,width='3',font='none 28',text='-')
+
+btn2=Button(app,width='3',font='none 28',text='-',
+            command=lambda:Calc('-'))
 btn2.place(x=120,y=150)
-btn3=Button(app,width='3',font='none 28',text='*')
+
+btn3=Button(app,width='3',font='none 28',text='*',
+            command=lambda:CalcMatch('*'))
 btn3.place(x=220,y=150)
-btn3=Button(app,width='3',font='none 28',text='/',command=div)
-btn3.place(x=320,y=150)
+
+btn4=Button(app,width='3',font='none 28',text='/',command=div)
+btn4.place(x=320,y=150)
 app.mainloop()

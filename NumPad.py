@@ -1,5 +1,7 @@
 from tkinter import *
 
+fileAddress='data/num.txt'
+
 def KeyPad(key):
     txt=label1['text']
     if txt=='0':
@@ -26,10 +28,20 @@ def BackSpace():
     else:
         label1['text']='0'
 
+def AddMemmory():
+    n=label1['text']
+    with open(fileAddress,'w') as writer:
+        writer.write(n)
+
+def Memmory():
+    #no need 'r'
+    with open(fileAddress,'r') as reader:
+        label1['text']=reader.read()
+
 
 form=Tk()
 form.title('NumPad')
-form.geometry('280x360')
+form.geometry('280x420')
 form.resizable(False,False)
 
 label1=Label(form,font='none 25',text='0',
@@ -54,7 +66,16 @@ btn0.place(x=10,y=280)
 
 btnBck=Button(form,font='none 18',text='BackSpace',width=11,height=2,
             command=BackSpace)
-btnBck.place(x=100,y=280)
+btnBck.place(x=102,y=280)
 
+btnMemmory=Button(form,font='none 18',text='M',
+                  width=5,command=Memmory)
+btnMemmory.place(x=10,y=360)
+btnAdd=Button(form,font='none 18',text='M+',
+                  width=5,command=AddMemmory)
+btnAdd.place(x=100,y=360)
+btnClear=Button(form,font='none 18',text='M-',
+                  width=5)
+btnClear.place(x=190,y=360)
 
 form.mainloop()

@@ -1,5 +1,45 @@
 from tkinter import *
 from tkinter import ttk #treeView
+from SqLiteClass import SqliteDB
+
+def AddProduct():
+    mode=entrySearch.get()
+    if len(mode)==0:
+        productTuple=(entryName.get(),
+                        int(entryInv.get()),
+                        entryBrand.get(),
+                        'پوشاک')
+        db=SqliteDB()
+        db.InsertProduct(productTuple)
+    else:
+        productTuple=(entryName.get(),
+                        int(entryInv.get()),
+                        entryBrand.get(),
+                        'پوشاک',
+                        int(entrySearch.get()))
+        db=SqliteDB()
+        db.UpdateProduct(productTuple)
+
+def ShowProducts():
+    db=SqliteDB()
+    products=db.GetProducts()
+
+    for p in products:
+        productTree.insert('',END,values=p)
+
+def RemoveProduct():
+    id=(int(entrySearch.get()),)
+    db=SqliteDB()
+    db.DeleteProduct(id)
+
+def EditProduct():
+    id=(int(entrySearch.get()),)
+    db=SqliteDB()
+    product=db.GetProduct(id)
+    for p in product:
+        entryName.insert(INSERT,p[1])
+        entryInv.insert(INSERT,p[2])
+        entryBrand.insert(INSERT,p[3])
 
 form=Tk()
 form.title('پروژه پایانی : انبار')
@@ -21,7 +61,7 @@ labelInv=Label(form,font=('',14),text='موجودی')
 labelInv.pack(anchor=E)
 entryInv=Entry(form,font=('',14),width=25,justify=RIGHT)
 entryInv.pack(anchor=E)
-
+6
 labelBrand=Label(form,font=('',14),text='برند تولید کننده')
 labelBrand.pack(anchor=E)
 entryBrand=Entry(form,font=('',14),width=25,justify=RIGHT)
@@ -39,10 +79,9 @@ default=StringVar(form,'انتخاب گروه کالا')
 optionGroup=OptionMenu(form,default,*groups)
 optionGroup.pack(anchor=E)
 
-
 btnAdd=Button(form,font=('',16),text='ثبت کالا',
               bg='#088395',fg='white',border=1,
-              width=6)
+              width=6,command=AddProduct)
 
 btnAdd.place(x=360,y=235)
 ############## Add / Edit Product #######################
@@ -52,7 +91,7 @@ entrySearch=Entry(form,font=('',14),width=15,justify=RIGHT)
 entrySearch.place(x=75,y=10)
 
 # imgPath='images/searchicon.png'
-imgPath='finalproject/images/searchicon.png'
+imgPath='images/searchicon.png'
 
 #1
 imgData=PhotoImage(file=imgPath)
@@ -60,6 +99,13 @@ imgData=imgData.subsample(50,50)
 imgBtnSearch=Button(form,image=imgData,border=0)
 imgBtnSearch.place(x=36,y=2)
 
+btnDelete=Button(form,font=('',12),text='حذف کالا',
+                 command=RemoveProduct)
+btnDelete.place(x=250,y=7)
+
+btnEdit=Button(form,font=('',12),text='ویرایش',
+                 command=EditProduct)
+btnEdit.place(x=315,y=7)
 
 ############## Search Product #######################
 
@@ -86,12 +132,17 @@ productTree.heading('#5',text='Group')
 productTree.place(x=10,y=50)
 
 btnShow=Button(form,font=('',14),text='نمایش موجودی انبار',
-               bg='#3085C3',fg='white',border=1)
+               bg='#3085C3',fg='white',border=1,command=ShowProducts)
 
 btnShow.place(x=10,y=370)
 
 ############## Product data #######################
 
+####### create database -> products table ##########
+db=SqliteDB()
+db.CreateProductTable()
+
+####### create database -> products table ##########
 
 
 form.mainloop()

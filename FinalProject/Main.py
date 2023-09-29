@@ -8,14 +8,14 @@ def AddProduct():
         productTuple=(entryName.get(),
                         int(entryInv.get()),
                         entryBrand.get(),
-                        'پوشاک')
+                        MenuOption.get())
         db=SqliteDB()
         db.InsertProduct(productTuple)
     else:
         productTuple=(entryName.get(),
                         int(entryInv.get()),
                         entryBrand.get(),
-                        'پوشاک',
+                        MenuOption.get(),
                         int(entrySearch.get()))
         db=SqliteDB()
         db.UpdateProduct(productTuple)
@@ -75,8 +75,8 @@ groups=['لوازم خانگی',
         'آریشی و بهداشتی',
         'پوشاک']
 
-default=StringVar(form,'انتخاب گروه کالا')
-optionGroup=OptionMenu(form,default,*groups)
+MenuOption=StringVar(form,'انتخاب گروه کالا')
+optionGroup=OptionMenu(form,MenuOption,*groups)
 optionGroup.pack(anchor=E)
 
 btnAdd=Button(form,font=('',16),text='ثبت کالا',
@@ -88,7 +88,7 @@ btnAdd.place(x=360,y=235)
 
 ############## Search Product #######################
 entrySearch=Entry(form,font=('',14),width=15,justify=RIGHT)
-entrySearch.place(x=75,y=10)
+entrySearch.place(x=45,y=10)
 
 # imgPath='images/searchicon.png'
 imgPath='images/searchicon.png'
@@ -97,15 +97,15 @@ imgPath='images/searchicon.png'
 imgData=PhotoImage(file=imgPath)
 imgData=imgData.subsample(50,50)
 imgBtnSearch=Button(form,image=imgData,border=0)
-imgBtnSearch.place(x=36,y=2)
+imgBtnSearch.place(x=10,y=2)
 
 btnDelete=Button(form,font=('',12),text='حذف کالا',
                  command=RemoveProduct)
-btnDelete.place(x=250,y=7)
+btnDelete.place(x=220,y=7)
 
 btnEdit=Button(form,font=('',12),text='ویرایش',
                  command=EditProduct)
-btnEdit.place(x=315,y=7)
+btnEdit.place(x=285,y=7)
 
 ############## Search Product #######################
 

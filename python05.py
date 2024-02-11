@@ -278,14 +278,106 @@
 # print(user)
 
 #24
-setA={5,8,3,12}
-setB={10,8,4,9}
-print(setA)
-print(setA.union(setB))
-print(setA.intersection(setB))
-print(setA.difference(setB))
-print(setB.difference(setA))
-setA.remove(5)
-setA.add(11)
-print(setA)
-print(max(setA))
+# setA={5,8,3,12}
+# setB={10,8,4,9}
+# print(setA)
+# print(setA.union(setB))
+# print(setA.intersection(setB))
+# print(setA.difference(setB))
+# print(setB.difference(setA))
+# setA.remove(5)
+# setA.add(11)
+# print(setA)
+# print(max(setA))
+
+# review #
+#1
+# name='ali'
+# print(name*3)
+# print(3*name)
+# print('name is : {name}')
+# print(f'name is : {name}')
+
+#2
+# n=0
+# print(n>0)
+# print(n>=0)
+# print(not n==0)
+
+#3
+# mylist=['ali','sara','amir','maryam','parsa']
+# print(mylist)
+# temp=mylist.pop()
+ 
+# print(temp)
+# print(mylist) 
+
+#4
+# dict={'name':'ali','family':'amiri'}
+# print(dict['family'])
+# #print(dict[0])#error
+
+#5
+# A={'ali','amir'}
+# B={'ali','sara'}
+# print(A.union(B))
+
+#25 filter lambda
+# score=[12.5,15,14.25,8,17.5,18,15,19,6.75,20]
+# f=filter(lambda n: n<10, score)
+# lst=list(f)
+# print(f)
+# print(lst)
+# print(len(lst))
+
+# result=list(filter(lambda n: n>=15,score))
+# print(result)
+# print(*result, sep=' - ')
+# print(len(result))
+
+#26
+# score=[12.5,15,14.25,8,17.5,18,15,19,6.75,20]
+# #1
+# # lst1=list(filter(lambda n: n>10, score))
+# # lst2=list(filter(lambda n: n<15, lst1))
+# # print(lst2)
+
+# #2
+# # result=list(filter(lambda n: n>10 and n<15, score))
+# # print(result)
+
+# #3
+# result=list(filter(lambda s: s>15 or s<10, score))
+# print(result)
+
+#27 for
+# myStr='hello world, python'
+# for n in myStr:
+#     # print(n.upper(),end='')
+#     if n=='o':
+#         print(n.upper(),end='')
+#     else:
+#         print(n,end='')
+
+
+#28   
+# myStr='hello world, python'
+# #HeLlO wOrLd, PyThOn
+# i=0
+# for n in myStr:
+#     if i%2==0:
+#         print(n.upper(),end='')
+#     else:
+#         print(n.lower(),end='')
+#     i+=1
+
+#29
+names=['ali','amir','sadegh','mehdi','reza']
+# for
+for n in names:
+    if 'r' in n:
+        print(n)
+# lambda
+result=filter(lambda n: 'r' in n,names)
+print(list(result))
+

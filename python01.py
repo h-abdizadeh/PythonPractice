@@ -237,16 +237,16 @@
 # print(n)
 
 #26
-from random import randrange
-names=['sepehr',
-       'sepanta',
-       'elaheh',
-       'elnaz',
-       'fatemeh',
-       'maryam',
-       'mahdieh']
-n=randrange(len(names))
-print(names[n])
+# from random import randrange
+# names=['sepehr',
+#        'sepanta',
+#        'elaheh',
+#        'elnaz',
+#        'fatemeh',
+#        'maryam',
+#        'mahdieh']
+# n=randrange(len(names))
+# print(names[n])
 
 #27
 # names=['ali','sara','reza','amir','narges','reza']
@@ -316,21 +316,21 @@ print(names[n])
 #     del names[r]
 
 #32
-# n=1
-# m=1
-# i=1
-# while n<16:
-#     #1
-#     # if n%5==0:
-#     #     print(n)
-#     # else:
-#     #     print(n,end='\t')
-#     #2
-#     print(n,end='\t')
-#     if m==i:
-#         print()
-#         m+=1
-#         i=0
-#     i+=1
+n=1
+m=1
+i=1
+while n<16:
+    #1
+    # if n%5==0:
+    #     print(n)
+    # else:
+    #     print(n,end='\t')
+    #2
+    print(n,end='\t')
+    if m==i:
+        print()
+        m+=1
+        i=0
+    i+=1
 
-#     n+=1
+    n+=1

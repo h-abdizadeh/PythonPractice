@@ -237,16 +237,16 @@
 # print(n)
 
 #26
-from random import randrange
-names=['sepehr',
-       'sepanta',
-       'elaheh',
-       'elnaz',
-       'fatemeh',
-       'maryam',
-       'mahdieh']
-n=randrange(len(names))
-print(names[n])
+# from random import randrange
+# names=['sepehr',
+#        'sepanta',
+#        'elaheh',
+#        'elnaz',
+#        'fatemeh',
+#        'maryam',
+#        'mahdieh']
+# n=randrange(len(names))
+# print(names[n])
 
 #27
 # names=['ali','sara','reza','amir','narges','reza']
@@ -384,15 +384,15 @@ print(names[n])
 #         winsound.Beep(820,1500)
 
 #36
-# names=[]
-# while True:
-#     n=input('enter name : ')
-#     n=n.strip()
-#     if len(n)>0:
-#         names.append(n)
-#     else:
-#         break
-#     print(names)
+names=[]
+while True:
+    n=input('enter name : ')
+    n=n.strip()
+    if len(n)>0:
+        names.append(n)
+    else:
+        break
+    print(names)
 
-# print(names)
-# print('end')
+print(names)
+print('end')

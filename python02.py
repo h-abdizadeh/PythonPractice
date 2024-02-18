@@ -392,6 +392,7 @@ while True:
         names.append(n)
     else:
         break
+        
     print(names)
 
 print(names)

@@ -336,11 +336,34 @@
 # # print(setA.union(setB).difference(setA.intersection(setB)))
 
 #32
+# myStr='hello world, python'
+# for n in myStr:
+#     if n=='o':
+#         print(n.upper(),end='')
+#     else:
+#         print(n,end='')
+
+#33
+# myStr='hello world, python'
+# i=0
+# for n in myStr:
+#     # if i%2==0:
+#     if i%2!=0:
+#        print(n.upper(),end='')
+#     else:
+#         print(n.lower(),end='') 
+#     i+=1
+
+#34 jump
 myStr='hello world, python'
 for n in myStr:
     if n=='o':
-        print(n.upper(),end='')
+        # continue #loop
+        # break
+        pass
     else:
         print(n,end='')
 
+print('\n'+myStr)#'\n' ==> Enter
+# print(f'\n{myStr}')
 

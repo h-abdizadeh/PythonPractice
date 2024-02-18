@@ -372,12 +372,50 @@
 #     i+=1
 
 #29
-names=['ali','amir','sadegh','mehdi','reza']
-# for
-for n in names:
-    if 'r' in n:
-        print(n)
-# lambda
-result=filter(lambda n: 'r' in n,names)
-print(list(result))
+# names=['ali','amir','sadegh','mehdi','reza']
+# # for
+# for n in names:
+#     if 'r' in n:
+#         print(n)
+# # lambda
+# result=filter(lambda n: 'r' in n,names)
+# print(list(result))
 
+#30
+# price=[15000,37500,5000,23000,20000]
+# # 1
+# # i=0
+# # for n in price:
+# #     if n<=15000:
+# #         finalprice=n-(n*10/100)
+# #         price[i]=finalprice
+# #     i+=1
+
+# #2
+# for i in range(0,len(price)):
+#     if price[i]<=15000:
+#         p=price[i]
+#         p=p-(p*10/100)
+#         price[i]=p
+
+# print(price)
+
+#31
+# myStr="Hello World, Python"
+# for n in myStr:
+#     if n=='o':
+#         # break
+#         # continue (just in loop)
+#         pass
+#     print(n,end='')
+        
+#32
+# n=374
+# while n>0:
+#     print(n%10)
+#     n=int(n/10)
+
+#33
+from random import randrange
+while True:
+    print(randrange(1000,10000),end='\t')

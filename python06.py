@@ -480,9 +480,9 @@
 #     print()
 
 #3
-# numbers=[12.5,14,11.75,15,17.75,10.25]
-# result=filter(lambda n: n>=10 and n<12, numbers)
-# print(*result)
+numbers=[12.5,14,11.75,15,17.75,10.25]
+result=filter(lambda n: n>=10 and n<12, numbers)
+print(*result)
 
 
 

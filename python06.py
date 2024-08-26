@@ -318,16 +318,171 @@
 # print(mylist)
 
 #32
-mylist=['melika','sara','fatemeh','sareh','sara']
-# del mylist[2]#index
-# mylist.remove('sara')#value
-# # mylist.remove('ava')#error
-# mylist.pop()
-# mylist.pop(0)
-# print(mylist.pop())
-n=mylist.pop()
-print(n)
-print(mylist)
+# mylist=['melika','sara','fatemeh','sareh','sara']
+# # del mylist[2]#index
+# # mylist.remove('sara')#value
+# # # mylist.remove('ava')#error
+# # mylist.pop()
+# # mylist.pop(0)
+# # print(mylist.pop())
+# n=mylist.pop()
+# print(n)
+# print(mylist)
+
+#46
+# mylist=[6,5,-3,12,-8,5,33,2,-1]
+# print(mylist.count(5))
+# print(mylist.count(12))
+# print(mylist.count(1))
+# mystr='mohandesi farda'
+# print(mystr.count('a'))
+# print(mystr.count('farda'))
+
+#47 filter, lambda
+# mylist=[6,5,-3,12,-8,5,33,2,-1]
+# result=filter(lambda n: n<0, mylist)
+# print(result)
+# print(*result)
+
+# result=filter(lambda n: n%2, mylist)
+# print(*result)
+
+#############
+# print(bool(5))
+# print(bool(-3))
+# print(bool(0))
+# print(bool('farda'))
+# print(bool(''))
+# print(bool(5.25))
+# print(bool(0.0))
+# print(bool([3,8,12]))
+# print(bool([]))
+# print(bool(5%2))
+# print(bool(8%2))
+
+#48
+# mylist=[6,5,-3,12,-8,5,33,2,-1,120,11]
+# result=filter(lambda n: n>=10 and n<=99, mylist)
+
+#49
+# mylist=['amir','sara','ava','narges','reza']
+# search=input('enter input : ')
+# result=filter(lambda n:search in n , mylist)
+# print(*result)
+
+#50
+# for i in range(1,100):
+#     if i%2==0:
+#         print(i,end=' ')
+#     else:
+#         print('hop',end=' ')
+
+
+#51
+# from random import sample
+# names=['melika','fatemeh','sara','sareh','parnian','sogand','tania','ava']
+# result=sample(names,len(names))
+# print(*result,sep='\n')
+
+#52
+# mylist=[1,5,-3,4,12,5,-5,8,32]
+# # # print(mylist.count(5))
+# # # print(mylist.count(-3))
+# # result=list(filter(lambda n: n<0, mylist))
+# # print(result)
+# # print(*result)
+# # print(len(result))
+# result=filter(lambda n: n>0 and n%2!=0, mylist)
+# print(*result)
+
+#53
+# mylist=[1,5,-3,4,12,5,-6,8,32]
+# #1
+# # for n in mylist:
+# #     if n%2==0:
+# #         print(n,end=' ')
+# #         # break
+
+# #2
+# for i in range(len(mylist)-1,-1,-1):
+#     # print(i)
+#     if mylist[i]%2==0:
+#         print(mylist[i],end=' ')
+#         break
+
+#54
+# from random import randrange
+# score=1000
+# goal=randrange(1,501)
+
+# while True:
+#     guess=int(input(f'enter guess 1 -> 500 [score :{score}]: '))
+#     if guess>goal:
+#         print('go down')
+#         score-=50
+#     elif guess<goal:
+#         print('go up')
+#         score-=50
+#     elif guess==goal:#else
+#         print('you win')
+#         break
+    
+#     if score<=0:
+#         print(f'you lose [goal : {goal}]')
+#         break
+
+#55
+# from random import randrange
+# goal=randrange(1,501)
+
+# for i in range(5):
+#     guess=int(input('enter guess 1 -> 500: '))
+#     if guess>goal:
+#         print('go down')
+#     elif guess<goal:
+#         print('go up')
+#     elif guess==goal:#else
+#         print('you win')
+#         break
+
+# print(f'goal : {goal}')
+
+#56
+# myStr='     Hello World, Python     '
+# print(myStr)
+# print(len(myStr))
+# print(myStr.strip())#lstrip, rstrip
+# print(myStr.upper())
+# print(myStr.lower())
+# print(myStr.swapcase())
+# print(myStr.replace('o','*'))
+# print(myStr.replace('Hello','Hi'))
+# print(myStr.count('l'))
+# print(myStr.index('o'))
+# print(myStr.index('World'))
+# result=myStr.strip().split(' ')
+# print(result)
+
+###################
+#1
+# from random import randrange
+# i=0
+# while i<5:
+#     rnd=randrange(1000,10000)
+#     if rnd%2==0:
+#         print(rnd)
+#         i+=1
+
+#2
+# for i in range(1,6):
+#     for j in range(1,6):
+#         print(i*j,end='\t')
+#     print()
+
+#3
+# numbers=[12.5,14,11.75,15,17.75,10.25]
+# result=filter(lambda n: n>=10 and n<12, numbers)
+# print(*result)
 
 
 

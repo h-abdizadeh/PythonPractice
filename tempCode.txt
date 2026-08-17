@@ -1,0 +1,27 @@
+from tkinter import *
+
+def b1click():
+    a=l1['text']
+    l1['text']=a+1
+
+def b2click():
+    a=l1['text']
+    if a>0:
+        l1['text']=a-1
+
+app=Tk()#------------------------------------
+
+l1=Label(app,text=0,font='impact 32',width=10,height=2)
+l1.pack()
+
+b1=Button(app,text='+',font='impact 32',width=10,
+          bg='green',fg='white')
+b1['command']=b1click
+b1.pack()
+
+b2=Button(app,text='-',font='impact 32',width=10,
+          bg='red',fg='white')
+b2['command']=b2click
+b2.pack()
+
+app.mainloop()
